@@ -12,9 +12,9 @@ namespace SuperHero.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string AlterEgo { get; set; }
-        public int PrimaryAbility { get; set; }
-        public int SecondaryAbility { get; set; }
-        public int Catchprase { get; set; }
+        public string PrimaryAbility { get; set; }
+        public string SecondaryAbility { get; set; }
+        public string Catchprase { get; set; }
 
     }
 }

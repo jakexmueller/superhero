@@ -9,12 +9,16 @@ namespace SuperHero.Controllers
 {
     public class SuperheroController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         // GET: Superhero
         public ActionResult Index()
         {
-            Superhero ironMan = new Superhero();
-            List<Superhero> superHeroes = new List<Superhero>();
-            return View(ironMan);
+            
+            //Superhero ironMan = new Superhero();
+
+            var heroes = db.Superhero.ToList();
+            return View(heroes);
         }
 
         //create
@@ -27,6 +31,7 @@ namespace SuperHero.Controllers
         //edit(int)
         public ActionResult Edit(int ID)
         {
+           //  var heroToEdit = db.Superhero.Where(s)
             Superhero superhero = new Superhero();
             return View(superhero);
         }

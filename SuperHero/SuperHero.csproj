@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201807021640408_DeleteandEditSuperHero.Designer.cs">
       <DependentUpon>201807021640408_DeleteandEditSuperHero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807021957284_CheckingDBcontext.cs" />
+    <Compile Include="Migrations\201807021957284_CheckingDBcontext.Designer.cs">
+      <DependentUpon>201807021957284_CheckingDBcontext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -278,8 +282,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Superhero\Create.cshtml" />
-    <Content Include="Views\Superhero\Edit.cshtml" />
     <Content Include="Views\Superhero\Delete.cshtml" />
+    <Content Include="Views\Superhero\Edit.cshtml" />
+    <Content Include="Views\Superhero\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807021640408_DeleteandEditSuperHero.resx">
       <DependentUpon>201807021640408_DeleteandEditSuperHero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807021957284_CheckingDBcontext.resx">
+      <DependentUpon>201807021957284_CheckingDBcontext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
