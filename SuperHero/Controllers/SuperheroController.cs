@@ -24,6 +24,7 @@ namespace SuperHero.Controllers
         //GET superheroes/Create
         public ActionResult Create()
         {
+
             return View();
         }
 
@@ -34,7 +35,7 @@ namespace SuperHero.Controllers
         {
             db.Superhero.Add(superhero);
             db.SaveChanges();
-            return View(superhero);
+            return RedirectToAction("Index");
         }
 
 
