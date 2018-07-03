@@ -214,6 +214,10 @@
     <Compile Include="Migrations\201807021957284_CheckingDBcontext.Designer.cs">
       <DependentUpon>201807021957284_CheckingDBcontext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807031510275_ChangedCatchPhraseSpelling.cs" />
+    <Compile Include="Migrations\201807031510275_ChangedCatchPhraseSpelling.Designer.cs">
+      <DependentUpon>201807031510275_ChangedCatchPhraseSpelling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -223,6 +227,18 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -231,6 +247,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\John.jpg" />
+    <Content Include="Images\spiderman.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -273,18 +291,19 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Superhero\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Superhero\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Superhero\Manage\Index.cshtml" />
+    <Content Include="Views\Superhero\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Superhero\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Superhero\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Superhero\Create.cshtml" />
     <Content Include="Views\Superhero\Delete.cshtml" />
     <Content Include="Views\Superhero\Edit.cshtml" />
     <Content Include="Views\Superhero\Index.cshtml" />
+    <Content Include="Views\Superhero\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -311,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807021957284_CheckingDBcontext.resx">
       <DependentUpon>201807021957284_CheckingDBcontext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807031510275_ChangedCatchPhraseSpelling.resx">
+      <DependentUpon>201807031510275_ChangedCatchPhraseSpelling.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

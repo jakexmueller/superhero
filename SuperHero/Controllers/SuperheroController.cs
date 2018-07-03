@@ -21,26 +21,62 @@ namespace SuperHero.Controllers
             return View(heroes);
         }
 
-        //create
+        //GET superheroes/Create
         public ActionResult Create()
         {
-            Superhero superhero = new Superhero();
+            return View();
+        }
+
+        //POST: superheroes/create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,Name, AlterEgo,PrimaryAbility,SecondaryAbility,CatchPhrase")] Superhero superhero)
+        {
+            db.Superhero.Add(superhero);
+            db.SaveChanges();
             return View(superhero);
         }
-        
+
+
         //edit(int)
-        public ActionResult Edit(int ID)
+        //GET superheroes/Edit
+        public ActionResult Edit(int? id)
         {
-           //  var heroToEdit = db.Superhero.Where(s)
-            Superhero superhero = new Superhero();
-            return View(superhero);
+            //Superhero superhero = ;
+           // var test = db.Superhero.Where(s => s.ID == id).FirstOrDefault();
+            var heroToEdit = db.Superhero.Find(id);
+            return View(heroToEdit);
         }
-        
-        //delete(int)
-        public ActionResult Delete(int ID)
+        //POST: superheroes/edit
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ID,Name, AlterEgo,PrimaryAbility,SecondaryAbility,CatchPhrase")] Superhero heroToEdit)
         {
-            Superhero superhero = new Superhero();
-            return View(superhero);
+
+            //Superhero heroToEdit = new Superhero();
+            var foundHero = db.Superhero.Where(s => s.ID == heroToEdit.ID).FirstOrDefault();
+            foundHero.Name = heroToEdit.Name;
+            foundHero.AlterEgo = heroToEdit.AlterEgo;
+            foundHero.PrimaryAbility = heroToEdit.PrimaryAbility;
+            foundHero.SecondaryAbility = heroToEdit.SecondaryAbility;
+            foundHero.CatchPhrase = heroToEdit.CatchPhrase;
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        //delete(int)
+        public ActionResult Delete(int? ID)
+        {
+            //Superhero superhero = new Superhero();
+            return View();
+        }
+
+        //details
+        public ActionResult Details(int id)
+        {
+            var heroToView = db.Superhero.Find(id);
+            return View(heroToView);
         }
 
 
